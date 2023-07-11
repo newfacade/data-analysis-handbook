@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>误差条 &#8212; 数据分析手册</title>
+    <title>Matplotlib &#8212; 数据分析手册</title>
   
   
   
@@ -57,11 +57,12 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'matplotlib/7-error';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'matplotlib/0';</script>
     <link rel="shortcut icon" href="../_static/github.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="prev" title="保存和加载图片" href="6-save.html" />
+    <link rel="next" title="线图" href="1-line.html" />
+    <link rel="prev" title="合并操作" href="../pandas/8-concat.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="docsearch:language" content="None">
   </head>
@@ -150,7 +151,7 @@ const thebe_selector_output = ".output, .cell_output"
                 
 
                     <li class="nav-item current active">
-                      <a class="nav-link nav-internal" href="0.html">
+                      <a class="nav-link nav-internal" href="#">
                         Matplotlib
                       </a>
                     </li>
@@ -236,7 +237,7 @@ const thebe_selector_output = ".output, .cell_output"
                 
 
                     <li class="nav-item current active">
-                      <a class="nav-link nav-internal" href="0.html">
+                      <a class="nav-link nav-internal" href="#">
                         Matplotlib
                       </a>
                     </li>
@@ -331,14 +332,14 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../pandas/8-concat.html">合并操作</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="0.html">Matplotlib</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Matplotlib</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="1-line.html">线图</a></li>
 <li class="toctree-l2"><a class="reference internal" href="2-scatter.html">散点图</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3-pie.html">饼图</a></li>
 <li class="toctree-l2"><a class="reference internal" href="4-hist.html">直方图</a></li>
 <li class="toctree-l2"><a class="reference internal" href="5-bar.html">柱状图</a></li>
 <li class="toctree-l2"><a class="reference internal" href="6-save.html">保存和加载图片</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">误差条</a></li>
+<li class="toctree-l2"><a class="reference internal" href="7-error.html">误差条</a></li>
 </ul>
 </li>
 </ul>
@@ -380,16 +381,6 @@ const thebe_selector_output = ".output, .cell_output"
         </label>
     </div>
     <div class="header-article__right">
-
-
-<div class="dropdown dropdown-launch-buttons">
-  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
-    <i class="fas fa-rocket"></i>
-  </button>
-  <ul class="dropdown-menu">
-  </ul>
-</div>
-
 <button onclick="toggleFullScreen()"
   class="btn btn-sm"
   data-toggle="tooltip"
@@ -426,7 +417,7 @@ title="Source repository"
 </a>
 </a>
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fmatplotlib/7-error.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fmatplotlib/0.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm dropdown-item"
    data-toggle="tooltip"
 data-placement="left"
@@ -451,7 +442,7 @@ title="Open an issue"
     <i class="fas fa-download"></i>
   </button>
   <ul class="dropdown-menu">
-      <li><a href="../_sources/matplotlib/7-error.ipynb" target="_blank"
+      <li><a href="../_sources/matplotlib/0.md" target="_blank"
    class="btn btn-sm dropdown-item"
    data-toggle="tooltip"
 data-placement="left"
@@ -462,7 +453,7 @@ title="Download source file"
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.ipynb</span>
+<span class="btn__text-container">.md</span>
 </a>
 </a>
       
@@ -492,7 +483,7 @@ title="Print to PDF"
             
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>误差条</h1>
+    <h1>Matplotlib</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -503,56 +494,18 @@ title="Print to PDF"
 
             <article class="bd-article" role="main">
               
-  <section id="id1">
-<h1>误差条<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h1>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;font.sans-serif&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Arial Unicode MS&#39;</span><span class="p">]</span>  <span class="c1"># matplotlib加入中文支持</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
-<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
-<span class="n">x_error</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
-<span class="n">y_error</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="o">*</span> <span class="mi">2</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>x: 横坐标</p>
-<p>y: 纵坐标</p>
-<p>xerr: 横坐标误差</p>
-<p>yerr: 纵坐标误差</p>
-<p>fmt: 线图的基本参数，如color、linstyle、linewidth、marker、markersize、label等</p>
-<p>ecolor: 误差线颜色</p>
-<p>elinewidth: 误差线宽度</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">errorbar</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">y</span><span class="p">,</span> <span class="n">xerr</span><span class="o">=</span><span class="n">x_error</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">ecolor</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;x-error sample&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../_images/d2bb385b79053c94606b1db8f5d38fdd92931bc2dca73fb1fff02ccd59d436d5.png" src="../_images/d2bb385b79053c94606b1db8f5d38fdd92931bc2dca73fb1fff02ccd59d436d5.png" />
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">errorbar</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">yerr</span><span class="o">=</span><span class="n">y_error</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;s&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">elinewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../_images/7d8aad5f24d7b2d357aac1ec007f6db3ae84208f0c5ab53131175db8706409f9.png" src="../_images/7d8aad5f24d7b2d357aac1ec007f6db3ae84208f0c5ab53131175db8706409f9.png" />
-</div>
+  <section id="matplotlib">
+<h1>Matplotlib<a class="headerlink" href="#matplotlib" title="Permalink to this headline">#</a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="1-line.html">线图</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2-scatter.html">散点图</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3-pie.html">饼图</a></li>
+<li class="toctree-l1"><a class="reference internal" href="4-hist.html">直方图</a></li>
+<li class="toctree-l1"><a class="reference internal" href="5-bar.html">柱状图</a></li>
+<li class="toctree-l1"><a class="reference internal" href="6-save.html">保存和加载图片</a></li>
+<li class="toctree-l1"><a class="reference internal" href="7-error.html">误差条</a></li>
+</ul>
 </div>
 </section>
 
@@ -584,12 +537,19 @@ title="Print to PDF"
             <footer class="bd-footer-article">
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-  <a class='left-prev' id="prev-link" href="6-save.html" title="previous page">
+  <a class='left-prev' id="prev-link" href="../pandas/8-concat.html" title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
           <p class="prev-next-subtitle">previous</p>
-          <p class="prev-next-title">保存和加载图片</p>
+          <p class="prev-next-title">合并操作</p>
       </div>
+  </a>
+  <a class='right-next' id="next-link" href="1-line.html" title="next page">
+  <div class="prev-next-info">
+      <p class="prev-next-subtitle">next</p>
+      <p class="prev-next-title">线图</p>
+  </div>
+  <i class="fa-solid fa-angle-right"></i>
   </a>
 </div>
             </footer>
