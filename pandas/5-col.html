@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>合并操作 &#8212; 数据分析手册</title>
+    <title>变更行和列 &#8212; 数据分析手册</title>
   
   
   
@@ -57,12 +57,12 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'pandas/8-concat';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'pandas/5-col';</script>
     <link rel="shortcut icon" href="../_static/github.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Matplotlib" href="../matplotlib/0.html" />
-    <link rel="prev" title="统计信息" href="7-stats.html" />
+    <link rel="next" title="统计信息" href="6-stats.html" />
+    <link rel="prev" title="处理缺失值" href="4-null.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="docsearch:language" content="None">
   </head>
@@ -138,21 +138,21 @@ const thebe_selector_output = ".output, .cell_output"
         
                     <li class="nav-item">
                       <a class="nav-link nav-internal" href="../numpy/0.html">
-                        Numpy
+                        numpy
                       </a>
                     </li>
                 
 
                     <li class="nav-item current active">
                       <a class="nav-link nav-internal" href="0.html">
-                        Pandas
+                        pandas
                       </a>
                     </li>
                 
 
                     <li class="nav-item">
                       <a class="nav-link nav-internal" href="../matplotlib/0.html">
-                        Matplotlib
+                        matplotlib
                       </a>
                     </li>
                 
@@ -199,6 +199,10 @@ const thebe_selector_output = ".output, .cell_output"
   
 
   
+  <label class="sidebar-toggle secondary-toggle" for="__secondary">
+      <span class="fa-solid fa-outdent"></span>
+  </label>
+  
 
 </div>
   </nav>
@@ -224,21 +228,21 @@ const thebe_selector_output = ".output, .cell_output"
         
                     <li class="nav-item">
                       <a class="nav-link nav-internal" href="../numpy/0.html">
-                        Numpy
+                        numpy
                       </a>
                     </li>
                 
 
                     <li class="nav-item current active">
                       <a class="nav-link nav-internal" href="0.html">
-                        Pandas
+                        pandas
                       </a>
                     </li>
                 
 
                     <li class="nav-item">
                       <a class="nav-link nav-internal" href="../matplotlib/0.html">
-                        Matplotlib
+                        matplotlib
                       </a>
                     </li>
                 
@@ -311,7 +315,7 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../numpy/0.html">Numpy</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../numpy/0.html">numpy</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../numpy/1-create.html">创建数组</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../numpy/2-slice.html">索引、切片</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../numpy/3-reshape.html">变形、拼接</a></li>
@@ -321,18 +325,17 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../numpy/7-save.html">保存和加载</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="0.html">Pandas</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="0.html">pandas</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="1-create.html">创建pandas对象</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2-choose.html">数据选取与修改</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2-index.html">索引和遍历</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3-calculate.html">运算</a></li>
 <li class="toctree-l2"><a class="reference internal" href="4-null.html">处理缺失值</a></li>
-<li class="toctree-l2"><a class="reference internal" href="5-save.html">保存与加载</a></li>
-<li class="toctree-l2"><a class="reference internal" href="6-col.html">变更行、列</a></li>
-<li class="toctree-l2"><a class="reference internal" href="7-stats.html">统计信息</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">合并操作</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">变更行和列</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6-stats.html">统计信息</a></li>
+<li class="toctree-l2"><a class="reference internal" href="7-save.html">保存与加载</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../matplotlib/0.html">Matplotlib</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../matplotlib/0.html">matplotlib</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../matplotlib/1-line.html">线图</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../matplotlib/2-scatter.html">散点图</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../matplotlib/3-pie.html">饼图</a></li>
@@ -427,7 +430,7 @@ title="Source repository"
 </a>
 </a>
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fpandas/8-concat.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fpandas/5-col.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm dropdown-item"
    data-toggle="tooltip"
 data-placement="left"
@@ -452,7 +455,7 @@ title="Open an issue"
     <i class="fas fa-download"></i>
   </button>
   <ul class="dropdown-menu">
-      <li><a href="../_sources/pandas/8-concat.ipynb" target="_blank"
+      <li><a href="../_sources/pandas/5-col.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    data-toggle="tooltip"
 data-placement="left"
@@ -485,7 +488,9 @@ title="Print to PDF"
       
   </ul>
 </div>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary" data-toggle="tooltip" data-placement="left" title="Toggle secondary sidebar">
+            <span class="fa-solid fa-list"></span>
+        </label>
     </div>
 </div>
             </div>
@@ -493,11 +498,34 @@ title="Print to PDF"
             
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>合并操作</h1>
+    <h1>变更行和列</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   修改行和列的名称
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id3">
+   修改行、列的顺序
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id4">
+   改变索引
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -505,7 +533,7 @@ title="Print to PDF"
             <article class="bd-article" role="main">
               
   <section id="id1">
-<h1>合并操作<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h1>
+<h1>变更行和列<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -514,17 +542,12 @@ title="Print to PDF"
 </div>
 </div>
 </div>
+<section id="id2">
+<h2>修改行和列的名称<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)),</span> <span class="n">index</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">])</span>
-<span class="n">df2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">)),</span> <span class="n">index</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">7</span><span class="p">),</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">])</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">df1</span><span class="p">,</span> <span class="n">df2</span><span class="p">])</span> <span class="c1"># concat合并</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;sample.csv&#39;</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">df</span>
 </pre></div>
 </div>
 </div>
@@ -547,41 +570,86 @@ title="Print to PDF"
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>a</th>
-      <th>b</th>
-      <th>c</th>
+      <th>duration</th>
+      <th>playtime</th>
+      <th>up</th>
+      <th>favorite</th>
+      <th>comment</th>
+      <th>share</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th>0</th>
-      <td>6</td>
-      <td>3</td>
-      <td>4</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>0</td>
-      <td>0</td>
-      <td>5</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>11</td>
-      <td>6</td>
-      <td>10</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>11</td>
+      <th>a</th>
+      <td>1</td>
+      <td>29</td>
+      <td>95</td>
+      <td>40</td>
+      <td>30</td>
       <td>13</td>
-      <td>6</td>
     </tr>
     <tr>
-      <th>6</th>
-      <td>7</td>
-      <td>11</td>
-      <td>6</td>
+      <th>b</th>
+      <td>58</td>
+      <td>43</td>
+      <td>26</td>
+      <td>78</td>
+      <td>70</td>
+      <td>61</td>
+    </tr>
+    <tr>
+      <th>c</th>
+      <td>41</td>
+      <td>18</td>
+      <td>17</td>
+      <td>57</td>
+      <td>45</td>
+      <td>29</td>
+    </tr>
+    <tr>
+      <th>d</th>
+      <td>14</td>
+      <td>55</td>
+      <td>36</td>
+      <td>82</td>
+      <td>75</td>
+      <td>43</td>
+    </tr>
+    <tr>
+      <th>e</th>
+      <td>25</td>
+      <td>40</td>
+      <td>49</td>
+      <td>5</td>
+      <td>49</td>
+      <td>57</td>
+    </tr>
+    <tr>
+      <th>f</th>
+      <td>48</td>
+      <td>61</td>
+      <td>59</td>
+      <td>1</td>
+      <td>45</td>
+      <td>88</td>
+    </tr>
+    <tr>
+      <th>g</th>
+      <td>73</td>
+      <td>53</td>
+      <td>87</td>
+      <td>33</td>
+      <td>46</td>
+      <td>37</td>
+    </tr>
+    <tr>
+      <th>h</th>
+      <td>12</td>
+      <td>12</td>
+      <td>23</td>
+      <td>82</td>
+      <td>94</td>
+      <td>8</td>
     </tr>
   </tbody>
 </table>
@@ -589,15 +657,12 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df1</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">df2</span><span class="p">)</span> <span class="c1"># append合并</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;up&#39;</span><span class="p">]</span> <span class="o">!=</span> <span class="mi">75</span><span class="p">]</span>
+<span class="n">df</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ipython-input-4-37afab19b6af&gt;:1: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
-  df1.append(df2) # append合并
-</pre></div>
-</div>
 <div class="output text_html"><div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -616,46 +681,674 @@ title="Print to PDF"
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>a</th>
-      <th>b</th>
-      <th>c</th>
+      <th>duration</th>
+      <th>playtime</th>
+      <th>up</th>
+      <th>favorite</th>
+      <th>comment</th>
+      <th>share</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th>0</th>
-      <td>6</td>
-      <td>3</td>
-      <td>4</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>0</td>
-      <td>0</td>
-      <td>5</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>11</td>
-      <td>6</td>
-      <td>10</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>11</td>
+      <th>a</th>
+      <td>1</td>
+      <td>29</td>
+      <td>95</td>
+      <td>40</td>
+      <td>30</td>
       <td>13</td>
-      <td>6</td>
     </tr>
     <tr>
-      <th>6</th>
-      <td>7</td>
-      <td>11</td>
-      <td>6</td>
+      <th>b</th>
+      <td>58</td>
+      <td>43</td>
+      <td>26</td>
+      <td>78</td>
+      <td>70</td>
+      <td>61</td>
+    </tr>
+    <tr>
+      <th>c</th>
+      <td>41</td>
+      <td>18</td>
+      <td>17</td>
+      <td>57</td>
+      <td>45</td>
+      <td>29</td>
+    </tr>
+    <tr>
+      <th>d</th>
+      <td>14</td>
+      <td>55</td>
+      <td>36</td>
+      <td>82</td>
+      <td>75</td>
+      <td>43</td>
+    </tr>
+    <tr>
+      <th>e</th>
+      <td>25</td>
+      <td>40</td>
+      <td>49</td>
+      <td>5</td>
+      <td>49</td>
+      <td>57</td>
+    </tr>
+    <tr>
+      <th>f</th>
+      <td>48</td>
+      <td>61</td>
+      <td>59</td>
+      <td>1</td>
+      <td>45</td>
+      <td>88</td>
+    </tr>
+    <tr>
+      <th>g</th>
+      <td>73</td>
+      <td>53</td>
+      <td>87</td>
+      <td>33</td>
+      <td>46</td>
+      <td>37</td>
+    </tr>
+    <tr>
+      <th>h</th>
+      <td>12</td>
+      <td>12</td>
+      <td>23</td>
+      <td>82</td>
+      <td>94</td>
+      <td>8</td>
     </tr>
   </tbody>
 </table>
 </div></div></div>
 </div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">columns</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Index([&#39;duration&#39;, &#39;playtime&#39;, &#39;up&#39;, &#39;favorite&#39;, &#39;comment&#39;, &#39;share&#39;], dtype=&#39;object&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 可直接修改列名，行也是一样</span>
+<span class="n">df</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+<span class="n">df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>0</th>
+      <th>1</th>
+      <th>2</th>
+      <th>3</th>
+      <th>4</th>
+      <th>5</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>a</th>
+      <td>1</td>
+      <td>29</td>
+      <td>95</td>
+      <td>40</td>
+      <td>30</td>
+      <td>13</td>
+    </tr>
+    <tr>
+      <th>b</th>
+      <td>58</td>
+      <td>43</td>
+      <td>26</td>
+      <td>78</td>
+      <td>70</td>
+      <td>61</td>
+    </tr>
+    <tr>
+      <th>c</th>
+      <td>41</td>
+      <td>18</td>
+      <td>17</td>
+      <td>57</td>
+      <td>45</td>
+      <td>29</td>
+    </tr>
+    <tr>
+      <th>d</th>
+      <td>14</td>
+      <td>55</td>
+      <td>36</td>
+      <td>82</td>
+      <td>75</td>
+      <td>43</td>
+    </tr>
+    <tr>
+      <th>e</th>
+      <td>25</td>
+      <td>40</td>
+      <td>49</td>
+      <td>5</td>
+      <td>49</td>
+      <td>57</td>
+    </tr>
+    <tr>
+      <th>f</th>
+      <td>48</td>
+      <td>61</td>
+      <td>59</td>
+      <td>1</td>
+      <td>45</td>
+      <td>88</td>
+    </tr>
+    <tr>
+      <th>g</th>
+      <td>73</td>
+      <td>53</td>
+      <td>87</td>
+      <td>33</td>
+      <td>46</td>
+      <td>37</td>
+    </tr>
+    <tr>
+      <th>h</th>
+      <td>12</td>
+      <td>12</td>
+      <td>23</td>
+      <td>82</td>
+      <td>94</td>
+      <td>8</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+<section id="id3">
+<h2>修改行、列的顺序<a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 使用reindex修改行的顺序</span>
+<span class="n">df</span><span class="o">.</span><span class="n">reindex</span><span class="p">([</span><span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">,</span> <span class="s1">&#39;e&#39;</span><span class="p">,</span> <span class="s1">&#39;f&#39;</span><span class="p">,</span> <span class="s1">&#39;g&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">,</span> <span class="s1">&#39;xx&#39;</span><span class="p">,</span> <span class="s1">&#39;yy&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>0</th>
+      <th>1</th>
+      <th>2</th>
+      <th>3</th>
+      <th>4</th>
+      <th>5</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>c</th>
+      <td>41.0</td>
+      <td>18.0</td>
+      <td>17.0</td>
+      <td>57.0</td>
+      <td>45.0</td>
+      <td>29.0</td>
+    </tr>
+    <tr>
+      <th>d</th>
+      <td>14.0</td>
+      <td>55.0</td>
+      <td>36.0</td>
+      <td>82.0</td>
+      <td>75.0</td>
+      <td>43.0</td>
+    </tr>
+    <tr>
+      <th>e</th>
+      <td>25.0</td>
+      <td>40.0</td>
+      <td>49.0</td>
+      <td>5.0</td>
+      <td>49.0</td>
+      <td>57.0</td>
+    </tr>
+    <tr>
+      <th>f</th>
+      <td>48.0</td>
+      <td>61.0</td>
+      <td>59.0</td>
+      <td>1.0</td>
+      <td>45.0</td>
+      <td>88.0</td>
+    </tr>
+    <tr>
+      <th>g</th>
+      <td>73.0</td>
+      <td>53.0</td>
+      <td>87.0</td>
+      <td>33.0</td>
+      <td>46.0</td>
+      <td>37.0</td>
+    </tr>
+    <tr>
+      <th>h</th>
+      <td>12.0</td>
+      <td>12.0</td>
+      <td>23.0</td>
+      <td>82.0</td>
+      <td>94.0</td>
+      <td>8.0</td>
+    </tr>
+    <tr>
+      <th>xx</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>yy</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 直接修改列的顺序</span>
+<span class="n">df</span><span class="p">[[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>5</th>
+      <th>4</th>
+      <th>3</th>
+      <th>2</th>
+      <th>1</th>
+      <th>0</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>a</th>
+      <td>13</td>
+      <td>30</td>
+      <td>40</td>
+      <td>95</td>
+      <td>29</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>b</th>
+      <td>61</td>
+      <td>70</td>
+      <td>78</td>
+      <td>26</td>
+      <td>43</td>
+      <td>58</td>
+    </tr>
+    <tr>
+      <th>c</th>
+      <td>29</td>
+      <td>45</td>
+      <td>57</td>
+      <td>17</td>
+      <td>18</td>
+      <td>41</td>
+    </tr>
+    <tr>
+      <th>d</th>
+      <td>43</td>
+      <td>75</td>
+      <td>82</td>
+      <td>36</td>
+      <td>55</td>
+      <td>14</td>
+    </tr>
+    <tr>
+      <th>e</th>
+      <td>57</td>
+      <td>49</td>
+      <td>5</td>
+      <td>49</td>
+      <td>40</td>
+      <td>25</td>
+    </tr>
+    <tr>
+      <th>f</th>
+      <td>88</td>
+      <td>45</td>
+      <td>1</td>
+      <td>59</td>
+      <td>61</td>
+      <td>48</td>
+    </tr>
+    <tr>
+      <th>g</th>
+      <td>37</td>
+      <td>46</td>
+      <td>33</td>
+      <td>87</td>
+      <td>53</td>
+      <td>73</td>
+    </tr>
+    <tr>
+      <th>h</th>
+      <td>8</td>
+      <td>94</td>
+      <td>82</td>
+      <td>23</td>
+      <td>12</td>
+      <td>12</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+<section id="id4">
+<h2>改变索引<a class="headerlink" href="#id4" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 使用reset_index重置索引</span>
+<span class="n">df</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>index</th>
+      <th>0</th>
+      <th>1</th>
+      <th>2</th>
+      <th>3</th>
+      <th>4</th>
+      <th>5</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>a</td>
+      <td>1</td>
+      <td>29</td>
+      <td>95</td>
+      <td>40</td>
+      <td>30</td>
+      <td>13</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>b</td>
+      <td>58</td>
+      <td>43</td>
+      <td>26</td>
+      <td>78</td>
+      <td>70</td>
+      <td>61</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>c</td>
+      <td>41</td>
+      <td>18</td>
+      <td>17</td>
+      <td>57</td>
+      <td>45</td>
+      <td>29</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>d</td>
+      <td>14</td>
+      <td>55</td>
+      <td>36</td>
+      <td>82</td>
+      <td>75</td>
+      <td>43</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>e</td>
+      <td>25</td>
+      <td>40</td>
+      <td>49</td>
+      <td>5</td>
+      <td>49</td>
+      <td>57</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>f</td>
+      <td>48</td>
+      <td>61</td>
+      <td>59</td>
+      <td>1</td>
+      <td>45</td>
+      <td>88</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>g</td>
+      <td>73</td>
+      <td>53</td>
+      <td>87</td>
+      <td>33</td>
+      <td>46</td>
+      <td>37</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>h</td>
+      <td>12</td>
+      <td>12</td>
+      <td>23</td>
+      <td>82</td>
+      <td>94</td>
+      <td>8</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 使用set_index用现有的列做索引</span>
+<span class="n">df</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="n">keys</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th></th>
+      <th>2</th>
+      <th>3</th>
+      <th>4</th>
+      <th>5</th>
+    </tr>
+    <tr>
+      <th>0</th>
+      <th>1</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1</th>
+      <th>29</th>
+      <td>95</td>
+      <td>40</td>
+      <td>30</td>
+      <td>13</td>
+    </tr>
+    <tr>
+      <th>58</th>
+      <th>43</th>
+      <td>26</td>
+      <td>78</td>
+      <td>70</td>
+      <td>61</td>
+    </tr>
+    <tr>
+      <th>41</th>
+      <th>18</th>
+      <td>17</td>
+      <td>57</td>
+      <td>45</td>
+      <td>29</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <th>55</th>
+      <td>36</td>
+      <td>82</td>
+      <td>75</td>
+      <td>43</td>
+    </tr>
+    <tr>
+      <th>25</th>
+      <th>40</th>
+      <td>49</td>
+      <td>5</td>
+      <td>49</td>
+      <td>57</td>
+    </tr>
+    <tr>
+      <th>48</th>
+      <th>61</th>
+      <td>59</td>
+      <td>1</td>
+      <td>45</td>
+      <td>88</td>
+    </tr>
+    <tr>
+      <th>73</th>
+      <th>53</th>
+      <td>87</td>
+      <td>33</td>
+      <td>46</td>
+      <td>37</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <th>12</th>
+      <td>23</td>
+      <td>82</td>
+      <td>94</td>
+      <td>8</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -686,17 +1379,17 @@ title="Print to PDF"
             <footer class="bd-footer-article">
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-  <a class='left-prev' id="prev-link" href="7-stats.html" title="previous page">
+  <a class='left-prev' id="prev-link" href="4-null.html" title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
           <p class="prev-next-subtitle">previous</p>
-          <p class="prev-next-title">统计信息</p>
+          <p class="prev-next-title">处理缺失值</p>
       </div>
   </a>
-  <a class='right-next' id="next-link" href="../matplotlib/0.html" title="next page">
+  <a class='right-next' id="next-link" href="6-stats.html" title="next page">
   <div class="prev-next-info">
       <p class="prev-next-subtitle">next</p>
-      <p class="prev-next-title">Matplotlib</p>
+      <p class="prev-next-title">统计信息</p>
   </div>
   <i class="fa-solid fa-angle-right"></i>
   </a>
@@ -706,6 +1399,37 @@ title="Print to PDF"
           </div>
           
           
+          
+            <div class="bd-sidebar-secondary bd-toc">
+              
+<div class="toc-item">
+  
+<div class="tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+</div>
+<nav id="bd-toc-nav" class="page-toc">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   修改行和列的名称
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id3">
+   修改行、列的顺序
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id4">
+   改变索引
+  </a>
+ </li>
+</ul>
+
+</nav>
+</div>
+
+            </div>
           
           
         </div>
