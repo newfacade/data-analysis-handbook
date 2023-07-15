@@ -61,7 +61,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../_static/github.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="保存和加载图片" href="6-save.html" />
+    <link rel="next" title="误差条" href="6-error.html" />
     <link rel="prev" title="直方图" href="4-hist.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="docsearch:language" content="None">
@@ -341,8 +341,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="3-pie.html">饼图</a></li>
 <li class="toctree-l2"><a class="reference internal" href="4-hist.html">直方图</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">柱状图</a></li>
-<li class="toctree-l2"><a class="reference internal" href="6-save.html">保存和加载图片</a></li>
-<li class="toctree-l2"><a class="reference internal" href="7-error.html">误差条</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6-error.html">误差条</a></li>
+<li class="toctree-l2"><a class="reference internal" href="7-save.html">保存和加载图片</a></li>
 </ul>
 </li>
 </ul>
@@ -539,7 +539,8 @@ title="Print to PDF"
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;font.sans-serif&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Arial Unicode MS&#39;</span><span class="p">]</span>  <span class="c1"># matplotlib加入中文支持</span>
+<span class="c1"># matplotlib加入中文支持</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;font.sans-serif&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Arial Unicode MS&#39;</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -560,13 +561,14 @@ title="Print to PDF"
 <p>label: 名字</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">6</span><span class="p">),</span> <span class="n">height</span><span class="o">=</span><span class="n">x</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;green&quot;</span><span class="p">,</span> <span class="n">align</span><span class="o">=</span><span class="s2">&quot;edge&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;vertical&quot;</span><span class="p">)</span> <span class="c1"># 垂直柱状图</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 垂直柱状图</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">6</span><span class="p">),</span> <span class="n">height</span><span class="o">=</span><span class="n">x</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;green&quot;</span><span class="p">,</span> <span class="n">align</span><span class="o">=</span><span class="s2">&quot;edge&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;vertical&quot;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/3e9883f21f2288114d50dadd4037b8e8c8661586c0d0b63a7c782e113de9c69a.png" src="../_images/3e9883f21f2288114d50dadd4037b8e8c8661586c0d0b63a7c782e113de9c69a.png" />
+<img alt="../_images/3d4165b3eb04bf8c95c3588fb321d1ee014d5ea298b1f7e8f1b2f1cd4a08a006.png" src="../_images/3d4165b3eb04bf8c95c3588fb321d1ee014d5ea298b1f7e8f1b2f1cd4a08a006.png" />
 </div>
 </div>
 </section>
@@ -582,7 +584,8 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">height</span> <span class="o">=</span> <span class="mf">0.4</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">barh</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span> <span class="o">-</span> <span class="n">height</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="n">x</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="n">height</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;base version&quot;</span><span class="p">)</span> <span class="c1"># 水平柱状图</span>
+<span class="c1"># 水平柱状图</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">barh</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span> <span class="o">-</span> <span class="n">height</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="n">x</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="n">height</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;base version&quot;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">barh</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span> <span class="o">+</span> <span class="n">height</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="n">y</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="n">height</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;new version&quot;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
@@ -590,7 +593,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/deb06409dd5537e11f603df014846c7a5517c8c5fe7bc6d933ce3e6f2bc1be6a.png" src="../_images/deb06409dd5537e11f603df014846c7a5517c8c5fe7bc6d933ce3e6f2bc1be6a.png" />
+<img alt="../_images/7eab6c435f10d53dc92c27a7364eaffb5fcb28dcf650c3078aaf3ce8556ccead.png" src="../_images/7eab6c435f10d53dc92c27a7364eaffb5fcb28dcf650c3078aaf3ce8556ccead.png" />
 </div>
 </div>
 </section>
@@ -626,8 +629,8 @@ title="Print to PDF"
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Attach a text label above each bar in *rects*, displaying its height.&quot;&quot;&quot;</span>
     <span class="k">for</span> <span class="n">rect</span> <span class="ow">in</span> <span class="n">rects</span><span class="p">:</span>
         <span class="n">height</span> <span class="o">=</span> <span class="n">rect</span><span class="o">.</span><span class="n">get_height</span><span class="p">()</span> 
-        <span class="n">ax</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">height</span><span class="p">),</span>
-                    <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="n">rect</span><span class="o">.</span><span class="n">get_x</span><span class="p">()</span> <span class="o">+</span> <span class="n">rect</span><span class="o">.</span><span class="n">get_width</span><span class="p">()</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="n">height</span><span class="p">),</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">height</span><span class="p">),</span> <span class="c1"># 显示的text</span>
+                    <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="n">rect</span><span class="o">.</span><span class="n">get_x</span><span class="p">()</span> <span class="o">+</span> <span class="n">rect</span><span class="o">.</span><span class="n">get_width</span><span class="p">()</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="n">height</span><span class="p">),</span> <span class="c1"># text的位置</span>
                     <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="c1"># 水平方向中间对齐</span>
                     <span class="n">va</span><span class="o">=</span><span class="s1">&#39;bottom&#39;</span><span class="p">)</span> <span class="c1"># 垂直方向下对齐</span>
 
@@ -681,10 +684,10 @@ title="Print to PDF"
           <p class="prev-next-title">直方图</p>
       </div>
   </a>
-  <a class='right-next' id="next-link" href="6-save.html" title="next page">
+  <a class='right-next' id="next-link" href="6-error.html" title="next page">
   <div class="prev-next-info">
       <p class="prev-next-subtitle">next</p>
-      <p class="prev-next-title">保存和加载图片</p>
+      <p class="prev-next-title">误差条</p>
   </div>
   <i class="fa-solid fa-angle-right"></i>
   </a>

@@ -341,8 +341,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../matplotlib/3-pie.html">饼图</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../matplotlib/4-hist.html">直方图</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../matplotlib/5-bar.html">柱状图</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../matplotlib/6-save.html">保存和加载图片</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../matplotlib/7-error.html">误差条</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../matplotlib/6-error.html">误差条</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../matplotlib/7-save.html">保存和加载图片</a></li>
 </ul>
 </li>
 </ul>
@@ -582,18 +582,18 @@ title="Print to PDF"
   <tbody>
     <tr>
       <th>a</th>
-      <td>0.882175</td>
-      <td>0.344712</td>
+      <td>0.117912</td>
+      <td>0.982356</td>
     </tr>
     <tr>
       <th>b</th>
-      <td>0.711399</td>
-      <td>0.178634</td>
+      <td>0.463806</td>
+      <td>0.588931</td>
     </tr>
     <tr>
       <th>c</th>
-      <td>0.038658</td>
-      <td>0.016804</td>
+      <td>0.988832</td>
+      <td>0.186724</td>
     </tr>
   </tbody>
 </table>
@@ -610,9 +610,9 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>a    0.882175
-b    0.711399
-c    0.038658
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>a    0.117912
+b    0.463806
+c    0.988832
 Name: first, dtype: float64
 </pre></div>
 </div>
@@ -626,7 +626,7 @@ Name: first, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.7113994750608107
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.46380572725205926
 </pre></div>
 </div>
 </div>
@@ -642,8 +642,8 @@ Name: first, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>first     0.882175
-second    0.344712
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>first     0.117912
+second    0.982356
 Name: a, dtype: float64
 </pre></div>
 </div>
@@ -681,11 +681,11 @@ Name: a, dtype: float64
   <tbody>
     <tr>
       <th>a</th>
-      <td>0.882175</td>
+      <td>0.117912</td>
     </tr>
     <tr>
       <th>b</th>
-      <td>0.711399</td>
+      <td>0.463806</td>
     </tr>
   </tbody>
 </table>
@@ -724,13 +724,13 @@ Name: a, dtype: float64
   <tbody>
     <tr>
       <th>a</th>
-      <td>0.882175</td>
-      <td>0.344712</td>
+      <td>0.117912</td>
+      <td>0.982356</td>
     </tr>
     <tr>
       <th>b</th>
-      <td>0.711399</td>
-      <td>0.178634</td>
+      <td>0.463806</td>
+      <td>0.588931</td>
     </tr>
   </tbody>
 </table>
@@ -770,17 +770,17 @@ Name: a, dtype: float64
   <tbody>
     <tr>
       <th>a</th>
-      <td>0.882175</td>
-      <td>0.344712</td>
+      <td>0.117912</td>
+      <td>0.982356</td>
     </tr>
     <tr>
       <th>b</th>
-      <td>0.711399</td>
-      <td>0.178634</td>
+      <td>0.463806</td>
+      <td>0.588931</td>
     </tr>
     <tr>
       <th>c</th>
-      <td>0.038658</td>
+      <td>0.988832</td>
       <td>100.000000</td>
     </tr>
   </tbody>
@@ -821,17 +821,17 @@ Name: a, dtype: float64
   <tbody>
     <tr>
       <th>a</th>
-      <td>0.882175</td>
+      <td>0.117912</td>
       <td>1.000000</td>
     </tr>
     <tr>
       <th>b</th>
-      <td>0.711399</td>
-      <td>0.178634</td>
+      <td>0.463806</td>
+      <td>0.588931</td>
     </tr>
     <tr>
       <th>c</th>
-      <td>0.038658</td>
+      <td>0.988832</td>
       <td>100.000000</td>
     </tr>
   </tbody>
@@ -873,13 +873,18 @@ Name: a, dtype: float64
   <tbody>
     <tr>
       <th>a</th>
-      <td>0.882175</td>
-      <td>1.0</td>
+      <td>0.117912</td>
+      <td>1.000000</td>
+    </tr>
+    <tr>
+      <th>b</th>
+      <td>0.463806</td>
+      <td>0.588931</td>
     </tr>
     <tr>
       <th>c</th>
-      <td>0.038658</td>
-      <td>100.0</td>
+      <td>0.988832</td>
+      <td>100.000000</td>
     </tr>
   </tbody>
 </table>
@@ -916,14 +921,9 @@ Name: a, dtype: float64
   </thead>
   <tbody>
     <tr>
-      <th>a</th>
-      <td>0.882175</td>
-      <td>1.000000</td>
-    </tr>
-    <tr>
-      <th>b</th>
-      <td>0.711399</td>
-      <td>0.178634</td>
+      <th>c</th>
+      <td>0.988832</td>
+      <td>100.0</td>
     </tr>
   </tbody>
 </table>
@@ -946,17 +946,17 @@ Name: a, dtype: float64
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>a
-first     0.882175
+first     0.117912
 second    1.000000
 Name: a, dtype: float64
 1.0
 b
-first     0.711399
-second    0.178634
+first     0.463806
+second    0.588931
 Name: b, dtype: float64
-0.1786337854816482
+0.5889309731970664
 c
-first       0.038658
+first       0.988832
 second    100.000000
 Name: c, dtype: float64
 100.0
@@ -977,13 +977,13 @@ Name: c, dtype: float64
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>first
-a    0.882175
-b    0.711399
-c    0.038658
+a    0.117912
+b    0.463806
+c    0.988832
 Name: first, dtype: float64
 second
 a      1.000000
-b      0.178634
+b      0.588931
 c    100.000000
 Name: second, dtype: float64
 </pre></div>

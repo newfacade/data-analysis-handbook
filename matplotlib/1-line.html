@@ -341,8 +341,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="3-pie.html">饼图</a></li>
 <li class="toctree-l2"><a class="reference internal" href="4-hist.html">直方图</a></li>
 <li class="toctree-l2"><a class="reference internal" href="5-bar.html">柱状图</a></li>
-<li class="toctree-l2"><a class="reference internal" href="6-save.html">保存和加载图片</a></li>
-<li class="toctree-l2"><a class="reference internal" href="7-error.html">误差条</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6-error.html">误差条</a></li>
+<li class="toctree-l2"><a class="reference internal" href="7-save.html">保存和加载图片</a></li>
 </ul>
 </li>
 </ul>
@@ -539,7 +539,8 @@ title="Print to PDF"
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;font.sans-serif&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Arial Unicode MS&#39;</span><span class="p">]</span>  <span class="c1"># matplotlib加入中文支持</span>
+<span class="c1"># matplotlib加入中文支持</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;font.sans-serif&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Arial Unicode MS&#39;</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -601,7 +602,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f792b038490&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f9231b49490&gt;]
 </pre></div>
 </div>
 <img alt="../_images/e9aac8b254aa1757ca1b9a32a91c55e3901bacdd8490af3734833c36099bd8a6.png" src="../_images/e9aac8b254aa1757ca1b9a32a91c55e3901bacdd8490af3734833c36099bd8a6.png" />
@@ -768,7 +769,8 @@ title="Print to PDF"
 <p><img alt="jupyter" src="../_images/named_colors.png" /></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">line_styles</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;:&#39;</span><span class="p">,</span> <span class="s1">&#39;-.&#39;</span><span class="p">,</span> <span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="s1">&#39;-&#39;</span><span class="p">}</span> <span class="c1"># 4种线性</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 4种线性</span>
+<span class="n">line_styles</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;:&#39;</span><span class="p">,</span> <span class="s1">&#39;-.&#39;</span><span class="p">,</span> <span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="s1">&#39;-&#39;</span><span class="p">}</span>
 </pre></div>
 </div>
 </div>
@@ -776,7 +778,8 @@ title="Print to PDF"
 <p><img alt="jupyter" src="../_images/line_styles_reference.png" /></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">markers</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;s&#39;</span><span class="p">,</span> <span class="s1">&#39;8&#39;</span><span class="p">,</span> <span class="s1">&#39;&gt;&#39;</span><span class="p">,</span> <span class="s1">&#39;&lt;&#39;</span><span class="p">,</span> <span class="s1">&#39;^&#39;</span><span class="p">,</span> <span class="s2">&quot;v&quot;</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="s1">&#39;X&#39;</span><span class="p">,</span> <span class="s1">&#39;P&#39;</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">,</span> <span class="s1">&#39;H&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">,</span> <span class="s1">&#39;*&#39;</span><span class="p">,</span> <span class="s1">&#39;p&#39;</span><span class="p">}</span> <span class="c1"># 14种标记类型</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 14种标记类型</span>
+<span class="n">markers</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;s&#39;</span><span class="p">,</span> <span class="s1">&#39;8&#39;</span><span class="p">,</span> <span class="s1">&#39;&gt;&#39;</span><span class="p">,</span> <span class="s1">&#39;&lt;&#39;</span><span class="p">,</span> <span class="s1">&#39;^&#39;</span><span class="p">,</span> <span class="s2">&quot;v&quot;</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="s1">&#39;X&#39;</span><span class="p">,</span> <span class="s1">&#39;P&#39;</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">,</span> <span class="s1">&#39;H&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">,</span> <span class="s1">&#39;*&#39;</span><span class="p">,</span> <span class="s1">&#39;p&#39;</span><span class="p">}</span>
 </pre></div>
 </div>
 </div>

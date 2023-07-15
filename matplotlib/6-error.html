@@ -57,11 +57,12 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'matplotlib/7-error';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'matplotlib/6-error';</script>
     <link rel="shortcut icon" href="../_static/github.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="prev" title="保存和加载图片" href="6-save.html" />
+    <link rel="next" title="保存和加载图片" href="7-save.html" />
+    <link rel="prev" title="柱状图" href="5-bar.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="docsearch:language" content="None">
   </head>
@@ -336,8 +337,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="3-pie.html">饼图</a></li>
 <li class="toctree-l2"><a class="reference internal" href="4-hist.html">直方图</a></li>
 <li class="toctree-l2"><a class="reference internal" href="5-bar.html">柱状图</a></li>
-<li class="toctree-l2"><a class="reference internal" href="6-save.html">保存和加载图片</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">误差条</a></li>
+<li class="toctree-l2"><a class="reference internal" href="7-save.html">保存和加载图片</a></li>
 </ul>
 </li>
 </ul>
@@ -425,7 +426,7 @@ title="Source repository"
 </a>
 </a>
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fmatplotlib/7-error.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fmatplotlib/6-error.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm dropdown-item"
    data-toggle="tooltip"
 data-placement="left"
@@ -450,7 +451,7 @@ title="Open an issue"
     <i class="fas fa-download"></i>
   </button>
   <ul class="dropdown-menu">
-      <li><a href="../_sources/matplotlib/7-error.ipynb" target="_blank"
+      <li><a href="../_sources/matplotlib/6-error.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    data-toggle="tooltip"
 data-placement="left"
@@ -509,7 +510,8 @@ title="Print to PDF"
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;font.sans-serif&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Arial Unicode MS&#39;</span><span class="p">]</span>  <span class="c1"># matplotlib加入中文支持</span>
+<span class="c1"># matplotlib加入中文支持</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;font.sans-serif&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Arial Unicode MS&#39;</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -539,7 +541,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/8ef6987d6e78706dff2dfc7f60ef65a86534eadcadc30fbfe588c38d54a173db.png" src="../_images/8ef6987d6e78706dff2dfc7f60ef65a86534eadcadc30fbfe588c38d54a173db.png" />
+<img alt="../_images/19f03fbdcd5542f0c033de3e50f072e1099958b096a7553f60a90d9657a5a2ab.png" src="../_images/19f03fbdcd5542f0c033de3e50f072e1099958b096a7553f60a90d9657a5a2ab.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -550,7 +552,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/8a7d9503e80b18de7922d136ee1e8bfeb0d5c489871c29fc1c5b7ae62bafeaa4.png" src="../_images/8a7d9503e80b18de7922d136ee1e8bfeb0d5c489871c29fc1c5b7ae62bafeaa4.png" />
+<img alt="../_images/05a508456f41b8935bf087e7927b447475310884b5d832d913e0263d510ee617.png" src="../_images/05a508456f41b8935bf087e7927b447475310884b5d832d913e0263d510ee617.png" />
 </div>
 </div>
 </section>
@@ -583,12 +585,19 @@ title="Print to PDF"
             <footer class="bd-footer-article">
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-  <a class='left-prev' id="prev-link" href="6-save.html" title="previous page">
+  <a class='left-prev' id="prev-link" href="5-bar.html" title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
           <p class="prev-next-subtitle">previous</p>
-          <p class="prev-next-title">保存和加载图片</p>
+          <p class="prev-next-title">柱状图</p>
       </div>
+  </a>
+  <a class='right-next' id="next-link" href="7-save.html" title="next page">
+  <div class="prev-next-info">
+      <p class="prev-next-subtitle">next</p>
+      <p class="prev-next-title">保存和加载图片</p>
+  </div>
+  <i class="fa-solid fa-angle-right"></i>
   </a>
 </div>
             </footer>

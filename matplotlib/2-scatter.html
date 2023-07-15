@@ -341,8 +341,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="3-pie.html">饼图</a></li>
 <li class="toctree-l2"><a class="reference internal" href="4-hist.html">直方图</a></li>
 <li class="toctree-l2"><a class="reference internal" href="5-bar.html">柱状图</a></li>
-<li class="toctree-l2"><a class="reference internal" href="6-save.html">保存和加载图片</a></li>
-<li class="toctree-l2"><a class="reference internal" href="7-error.html">误差条</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6-error.html">误差条</a></li>
+<li class="toctree-l2"><a class="reference internal" href="7-save.html">保存和加载图片</a></li>
 </ul>
 </li>
 </ul>
@@ -534,7 +534,8 @@ title="Print to PDF"
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;font.sans-serif&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Arial Unicode MS&#39;</span><span class="p">]</span>  <span class="c1"># matplotlib加入中文支持</span>
+<span class="c1"># matplotlib加入中文支持</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;font.sans-serif&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Arial Unicode MS&#39;</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -569,7 +570,7 @@ title="Print to PDF"
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &#39;正负例图&#39;)
 </pre></div>
 </div>
-<img alt="../_images/18ef8e795e7f319d38bd433c0250268174ea977c9a0e951a46c94163c863a55e.png" src="../_images/18ef8e795e7f319d38bd433c0250268174ea977c9a0e951a46c94163c863a55e.png" />
+<img alt="../_images/36a66e4d59bc778a67e70fbc551361cd102079532a57c1a10234fed29b51e006.png" src="../_images/36a66e4d59bc778a67e70fbc551361cd102079532a57c1a10234fed29b51e006.png" />
 </div>
 </div>
 </section>
@@ -587,15 +588,16 @@ title="Print to PDF"
 <span class="n">colors</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="n">N</span><span class="p">)</span>
 
 <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="n">colors</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="n">area</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;viridis&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">()</span> <span class="c1"># 显示colorbar</span>
+<span class="c1"># 显示colorbar</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.colorbar.Colorbar at 0x7fd270ba19a0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.colorbar.Colorbar at 0x7fed0a4fcee0&gt;
 </pre></div>
 </div>
-<img alt="../_images/b74a8a1721fc959a77e5f5acf947a9c94a9f8979726fe7fdfbc35f54254b3144.png" src="../_images/b74a8a1721fc959a77e5f5acf947a9c94a9f8979726fe7fdfbc35f54254b3144.png" />
+<img alt="../_images/8bcb8a8dccfd5b5ee8f6f39283a1b2c94b87070e7e581acc570c4702e79c83df.png" src="../_images/8bcb8a8dccfd5b5ee8f6f39283a1b2c94b87070e7e581acc570c4702e79c83df.png" />
 </div>
 </div>
 </section>
