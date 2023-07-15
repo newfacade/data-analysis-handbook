@@ -3,33 +3,31 @@
 
 format: jb-book
 root: intro
-parts:
-  - caption: numpy
-    chapters:
-    - file: numpy/1-create
-    - file: numpy/2-slice
-    - file: numpy/3-reshape
-    - file: numpy/4-operator
-    - file: numpy/5-agg
-    - file: numpy/6-compare
-    - file: numpy/7-save
-  - caption: pandas
-    chapters:
-    - file: pandas/1-create
-    - file: pandas/2-choose
-    - file: pandas/3-calculate
-    - file: pandas/4-null
-    - file: pandas/5-save
-    - file: pandas/6-col
-    - file: pandas/7-stats
-    - file: pandas/8-concat
-  - caption: matplotlib
-    chapters:
-    - file: matplotlib/1-line
-    - file: matplotlib/2-scatter
-    - file: matplotlib/3-pie
-    - file: matplotlib/4-hist
-    - file: matplotlib/5-bar
-    - file: matplotlib/6-save
-    - file: matplotlib/7-error
-
+chapters:
+- file: numpy/0
+  sections:
+  - file: numpy/1-create
+  - file: numpy/2-slice
+  - file: numpy/3-reshape
+  - file: numpy/4-operator
+  - file: numpy/5-agg
+  - file: numpy/6-compare
+  - file: numpy/7-save
+- file: pandas/0
+  sections:
+  - file: pandas/1-create
+  - file: pandas/2-index
+  - file: pandas/3-calculate
+  - file: pandas/4-null
+  - file: pandas/5-col
+  - file: pandas/6-stats
+  - file: pandas/7-save
+- file: matplotlib/0
+  sections:
+  - file: matplotlib/1-line
+  - file: matplotlib/2-scatter
+  - file: matplotlib/3-pie
+  - file: matplotlib/4-hist
+  - file: matplotlib/5-bar
+  - file: matplotlib/6-error
+  - file: matplotlib/7-save
